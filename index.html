@@ -123,7 +123,7 @@ const CONFIG = {
 const CARD_DEFS = [
   { id:'knight', name:'Knight', cost:3, hp:120, dmg:25, speed: 0.9, range: 22, type:'melee' },
   { id:'archer', name:'Archer', cost:3, hp:70, dmg:18, speed: 1.1, range: 110, type:'ranged', attackSpeed: 1.0 },
-  { id:'goblin', name:'Goblin', cost:2, hp:60, dmg:18, speed: 1.6, range: 18, type:'melee' },
+  { id:'goblin', name:'Goblin', cost:1, hp:30, dmg:8, speed: 1.8, range: 16, type:'melee' },
   { id:'giant', name:'Giant', cost:5, hp:300, dmg:30, speed: 0.6, range: 24, type:'melee', targetPriority:'tower' },
 ];
 
@@ -449,7 +449,7 @@ function towerBehavior(dt){
         const nowt = performance.now()/1000;
         if(nowt - tw._lastAtk > 0.8){
           tw._lastAtk = nowt;
-          nearest.hp -= 50;
+          nearest.hp -= 35;
         }
       }
     }
